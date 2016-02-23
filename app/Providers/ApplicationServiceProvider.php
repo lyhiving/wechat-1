@@ -33,7 +33,7 @@ class ApplicationServiceProvider extends ServiceProvider
                 'token'   => env('TOKEN'),
                 'log' => [
                     'level' => 'debug',
-                    'file'  => '/tmp/wechat.log',
+                    'file'  => 'wechat.log',
                 ]
             ]);
         });

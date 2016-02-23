@@ -35,6 +35,15 @@
                                     <td class="center">-</td>
                                     <td class="center">U</td>
                                 </tr>
+                                @foreach($users as $user)
+                                	<tr class="gradeU">
+                                	    <td>Other browsers</td>
+                                	    <td>All others</td>
+                                	    <td>-</td>
+                                	    <td class="center">-</td>
+                                	    <td class="center">U</td>
+                                	</tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

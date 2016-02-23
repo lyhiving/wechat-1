@@ -11,12 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/test',function(){
-   return view('admin.wechat.user');
-});
+Route::match(['get','post'],'/', 'IndexController@index');
+Route::get('/users','WechatController@users');
 
 /*
 |--------------------------------------------------------------------------
