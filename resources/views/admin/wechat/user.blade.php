@@ -20,28 +20,28 @@
                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                             <thead>
                                 <tr>
-                                    <th>Rendering engine</th>
-                                    <th>Browser</th>
-                                    <th>Platform(s)</th>
-                                    <th>Engine version</th>
-                                    <th>CSS grade</th>
+                                    <th class="text-center">用户ID</th>
+                                    <th class="text-center">头像</th>
+                                    <th class="text-center">昵称</th>
+                                    <th class="text-center">性别</th>
+                                    <th class="text-center">分组ID</th>
+                                    <th class="text-center">关注时间</th>
+                                    <th class="text-center">操作</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="gradeU">
-                                    <td>Other browsers</td>
-                                    <td>All others</td>
-                                    <td>-</td>
-                                    <td class="center">-</td>
-                                    <td class="center">U</td>
-                                </tr>
                                 @foreach($users as $user)
                                 	<tr class="gradeU">
-                                	    <td>Other browsers</td>
-                                	    <td>All others</td>
-                                	    <td>-</td>
-                                	    <td class="center">-</td>
-                                	    <td class="center">U</td>
+                                	    <td class="text-center">{{ $user->id }}</td>
+                                	    <td class="text-center"><img width="24px" height="24px" src="{{ $user->headimgurl }}" /></td>
+                                	    <td class="text-center">{{ $user->nickname }}</td>
+                                	    <td class="text-center">{{ $user->sex }}</td>
+                                	    <td class="text-center">{{ $user->groupid }}</td>
+                                	    <td class="text-center">{{ $user->subscribe_time }}</td>
+                                	    <td class="text-center">
+                                	    	<button class="btn btn-primary btn-xs">分组</button>
+                                	    	<button class="btn btn-primary btn-xs">备注</button>
+                                	    </td>
                                 	</tr>
                                 @endforeach
                             </tbody>
@@ -53,6 +53,15 @@
             <!-- /.panel -->
         </div>
         <!-- /.col-lg-12 -->
-    </div>                                    
+    </div>    
+
+    <div class="row">
+    	<div class="col-xs-6">
+    		
+    	</div>
+    	<div class="col-xs-6">
+    		{{ $users->render() }}
+    	</div>
+    </div>                                
 </div>
 @stop

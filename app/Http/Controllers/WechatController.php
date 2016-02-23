@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use EasyWeChat\Foundation\Application;
+use App\Model\Fan;
 
 class WechatController extends Controller{
     /**
@@ -16,13 +17,11 @@ class WechatController extends Controller{
     private $app;
 
     public function __construct(Application $application){
-
         $this->app = $application;
     }
 
     public function users(){
-        $openId = $this->app->user->lists()['data']['openid'];
-        var_dump($openId);
-        //view('admin.wechat.user')->with('users',$users);
+        $users = Fan::paginate(20);
+        return view('admin.wechat.user')->with('users',$users);
     }
 }
