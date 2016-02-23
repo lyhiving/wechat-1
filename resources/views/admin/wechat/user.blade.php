@@ -12,7 +12,9 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    全部粉丝
+                	<div class="col-xs-6">全部粉丝</div>
+                	<div class="col-xs-6"></div>
+                	<div class="clearfix"></div>
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
@@ -33,7 +35,7 @@
                                 @foreach($users as $user)
                                 	<tr class="gradeU">
                                 	    <td class="text-center">{{ $user->id }}</td>
-                                	    <td class="text-center"><img width="24px" height="24px" src="{{ $user->headimgurl }}" /></td>
+                                	    <td class="text-center"><img width="32px" height="32px" src="{{ $user->headimgurl }}" /></td>
                                 	    <td class="text-center">{{ $user->nickname }}</td>
                                 	    <td class="text-center">{{ $user->sex }}</td>
                                 	    <td class="text-center">{{ $user->groupid }}</td>
