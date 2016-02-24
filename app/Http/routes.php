@@ -10,9 +10,17 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+Route::group([
+        'prefix'=>'admin',
+        'namespace'=>'Admin'
+    ],function(){
+        Route::controllers([
+            'fan' => 'FanController',
+            'group' => 'FanGroupController'
+        ]);
+});
 Route::match(['get','post'],'/', 'IndexController@index');
-Route::get('/users','WechatController@users');
+
 
 /*
 |--------------------------------------------------------------------------

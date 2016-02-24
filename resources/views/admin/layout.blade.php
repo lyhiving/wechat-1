@@ -256,7 +256,8 @@
 	                    <li>
 	                    	<a href=""><i class="glyphicon glyphicon-comment"></i> 微信运营<span class="fa arrow"></span></a>
 	                    	<ul class="nav nav-second-level">
-	                    		<li><a href="">粉丝管理</a></li>
+	                    		<li><a href="{{ url('admin/fan/fans') }}">粉丝管理</a></li>
+	                    		<li><a href="{{ url('admin/group/groups') }}">分组管理</a></li>
 	                    		<li><a href="">微信群发</a></li>
 	                    		<li><a href="">素材管理</a></li>
 	                    		<li><a href="">自动回复</a></li>

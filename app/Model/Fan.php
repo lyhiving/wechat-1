@@ -4,6 +4,11 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Model\Fan
+ *
+ * @property-write mixed $subscribe_time
+ */
 class Fan extends Model
 {
     protected $table = 'fans';
