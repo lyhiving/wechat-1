@@ -10,17 +10,16 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::group([
-        'prefix'=>'admin',
-        'namespace'=>'Admin'
-    ],function(){
-        Route::controllers([
-            'fan' => 'FanController',
-            'group' => 'FanGroupController'
-        ]);
+Route::group(['namespace'=>'Service'],function(){
+    Route::match(['get','post'],'/', 'ServerController@index');
 });
-Route::match(['get','post'],'/', 'IndexController@index');
 
+Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
+    Route::controllers([
+        'fan' => 'FanController',
+        'group' => 'FanGroupController'
+    ]);
+});
 
 /*
 |--------------------------------------------------------------------------

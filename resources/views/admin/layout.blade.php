@@ -363,6 +363,6 @@
 
 	</div>
 </body>
-<script data-main="{{ asset('js/main') }}" src="{{ asset('js/require.js') }}" defer async="true"></script>
-@yield('script')
+<script data-main="{{ asset('js/main') }}" src="{{ asset('js/require.js') }}" ></script>
+@yield('js')
 </html>
